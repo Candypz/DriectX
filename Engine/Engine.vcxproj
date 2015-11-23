@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8188D5DD-FAF2-443D-918F-C5F950C897F3}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Class\BoundingGeometry.h" />
+    <ClInclude Include="Class\CommandScript.h" />
+    <ClInclude Include="Class\D3DRenderer.h" />
+    <ClInclude Include="Class\Defines.h" />
+    <ClInclude Include="Class\DirectInput.h" />
+    <ClInclude Include="Class\Engine.h" />
+    <ClInclude Include="Class\GUI.h" />
+    <ClInclude Include="Class\InputInterface.h" />
+    <ClInclude Include="Class\Light.h" />
+    <ClInclude Include="Class\Material.h" />
+    <ClInclude Include="Class\MathDefines.h" />
+    <ClInclude Include="Class\MathLibrary.h" />
+    <ClInclude Include="Class\Matrix.h" />
+    <ClInclude Include="Class\Physics.h" />
+    <ClInclude Include="Class\Plane.h" />
+    <ClInclude Include="Class\Polygon.h" />
+    <ClInclude Include="Class\PropertyScript.h" />
+    <ClInclude Include="Class\Quaternion.h" />
+    <ClInclude Include="Class\RainPS.h" />
+    <ClInclude Include="Class\Ray.h" />
+    <ClInclude Include="Class\RenderInterface.h" />
+    <ClInclude Include="Class\Structs.h" />
+    <ClInclude Include="Class\Token.h" />
+    <ClInclude Include="Class\Vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Class\BoundingGeometry.cpp" />
+    <ClCompile Include="Class\CommandScript.cpp" />
+    <ClCompile Include="Class\D3DRenderer.cpp" />
+    <ClCompile Include="Class\DirectInput.cpp" />
+    <ClCompile Include="Class\GUI.cpp" />
+    <ClCompile Include="Class\Matrix.cpp" />
+    <ClCompile Include="Class\Plane.cpp" />
+    <ClCompile Include="Class\Polygon.cpp" />
+    <ClCompile Include="Class\PropertyScript.cpp" />
+    <ClCompile Include="Class\Quaternion.cpp" />
+    <ClCompile Include="Class\RainPS.cpp" />
+    <ClCompile Include="Class\Ray.cpp" />
+    <ClCompile Include="Class\Token.cpp" />
+    <ClCompile Include="Class\Vector.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

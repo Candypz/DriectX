@@ -1,0 +1,5 @@
+# Load Skydome.
+LoadSkyBoxAsX "maps/skybox.x"
+
+#Load terrain.
+LoadTerrainAsX "maps/level1/level1.x"
